@@ -82,7 +82,7 @@ public class BowString : MonoBehaviour
 
     private float calculateForce(float endPosition)
     {
-        return Mathf.Abs((endPosition / 0.472f) * 20);
+        return Mathf.Abs((endPosition / 0.472f) * 30);
     }
 
     IEnumerator waitForShoot()

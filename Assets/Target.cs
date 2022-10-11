@@ -18,7 +18,10 @@ public class Target : MonoBehaviour
     private void ArrowStick(Collision other)
     {
         other.transform.Translate(_depth * -Vector3.up);
-        other.transform.parent = transform.parent;
+        other.transform.parent = this.transform;
+        Destroy(other.gameObject.GetComponent<Arrow>());
+        Destroy(other.rigidbody);
+        Destroy(other.collider);
     }
 
 }
